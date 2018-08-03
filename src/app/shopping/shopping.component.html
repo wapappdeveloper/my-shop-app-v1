@@ -1,0 +1,16 @@
+<div class="shopping-container">
+  <div class="row">
+    <div class="col-sm-12 col-xs-12">
+      <div class="list-group">
+        <div class="list-group-item" *ngFor="let item of itemList;let i = index">
+          <span class="badge badge-default">{{item.description}}</span>
+          <button class="btn btn-success" (click)="addItem(item)">Add Item</button>&nbsp;{{item.name}}
+          <span class="count-container" *ngIf="itemCount[i].count"><span class="count-number">{{itemCount[i].count}}</span> time{{itemCount[i].count > 1 ? 's' : ''}} added</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="alert alert-info">
+    <button class="btn btn-info" (click)="navigateTo('cart')">Show Cart</button>
+  </div>
+</div>

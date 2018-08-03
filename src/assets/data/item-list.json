@@ -1,0 +1,38 @@
+[
+    {
+        "name": "apple",
+        "description": "fruit",
+        "unit":"1kg",
+        "price":100
+    },
+    {
+        "name": "kitkat",
+        "description": "chocolate",
+        "unit":"100gm",
+        "price":10
+    },
+    {
+        "name": "nailpolist",
+        "description": "cosmetics",
+        "unit":"25ml",
+        "price":40
+    },
+    {
+        "name": "bovonto",
+        "description": "cooldrink",
+        "unit":"500ml",
+        "price":20
+    },
+    {
+        "name": "shirt",
+        "description": "costume",
+        "unit":"1nos",
+        "price":250
+    },
+    {
+        "name": "pen",
+        "description": "stationary",
+        "unit":"1nos",
+        "price":25
+    }
+]

@@ -1,0 +1,22 @@
+<div class="cart-container">
+  <div class="row">
+    <div class="col-sm-12 col-xs-12">
+      <div class="list-group">
+        <div class="list-group-item" *ngFor="let item of itemList;let i = index">
+          <span class="badge">{{item.description}}</span>
+          <button class="btn btn-danger" (click)="removeItem(item)">Remove Item</button>&nbsp;{{item.name}}
+          <span class="count-container" *ngIf="getItemCountByName(item.name)"><span class="count-number">{{getItemCountByName(item.name)}}</span> time{{getItemCountByName(item.name) > 1 ? 's' : ''}} added</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="itemList.length > 0; else elseBlock"  class="alert alert-info">
+    <button class="btn btn-primary" (click)="navigateTo('shopping')">To Add More Items</button>
+    <button class="btn btn-info" (click)="navigateTo('checkout')">Checkout</button>
+  </div>
+  <ng-template #elseBlock>
+    <div class="alert alert-info">
+        <button class="btn btn-primary" (click)="navigateTo('shopping')">Click to Add Items</button>
+    </div>
+  </ng-template>
+</div>

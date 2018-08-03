@@ -1,0 +1,35 @@
+<div class="checkout-container">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Item</th>
+        <th>Unit</th>
+        <th>Quantity</th>
+        <th>Price</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of itemList">
+        <td>{{item.name}}</td>
+        <td>{{item.description}}</td>
+        <td>{{item.unit}}</td>
+        <td>{{getItemCountByName(item.name)}}</td>
+        <td>{{getItemCountByName(item.name) * item.price}}</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="row">
+    <div class="col-sm-12 col-xs-12">
+      <div class="list-group">
+        <div class="list-group-item">
+          <span class="badge">item total</span>
+          <div class="pay-amount alert alert-info">Rs: {{totalAmount}}</div>
+          <button class="btn btn-success" (click)="navigateTo('banking')">Pay</button>
+          <button class="btn btn-primary add-more" (click)="navigateTo('shopping')">Add More Items</button>
+          <button class="btn btn-info show-cart" (click)="navigateTo('cart')">Show Cart</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
